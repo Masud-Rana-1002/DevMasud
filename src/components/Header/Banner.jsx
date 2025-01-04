@@ -12,6 +12,7 @@ import {
 } from "react-icons/fa";
 import 'animate.css';
 import ShareCommentButton from "../ShareCommentButton/ShareCommentButton";
+import DownloadButton from "../DownloadButton/DownloadButton";
 
 const Banner = () => {
   const words = [
@@ -36,9 +37,9 @@ const Banner = () => {
   }
 
   return (
-    <div className="w-full h-full  rounded-md">
+    <div className="w-full h-full bg-[#1c1f23] p-8  rounded-md">
       {/* Main */}
-      <header className="flex flex-col-reverse lg:flex-row gap-[50px] lg:gap-0 items-center justify-between lg:mt-3 ">
+      <header className="flex  flex-col-reverse lg:flex-row gap-[50px] lg:gap-0 items-center justify-between lg:mt-3 ">
         <div className="lg:w-[50%] w-full  text-center lg:text-left animate__animated animate__fadeInRight"> 
           <p className="">Welcome to my world</p>
 
@@ -103,7 +104,8 @@ const Banner = () => {
             </div>
           </div>
           <div className="mt-6  ">
-            <ShareCommentButton btnText="Download My Resume" />
+            <DownloadButton/>
+
           </div>
         </div>
         {/* banner img */}
@@ -114,7 +116,7 @@ const Banner = () => {
             play
             style={{ width: 350, height: 450 }}
           />
-          <div className="absolute -bottom-8 right-8 md:-right-8">
+          <div className="absolute -bottom-0 right-8 md:-right-8">
             <img src={myImg} alt="image" className="w-full mx-auto" />
           </div>
         </div>

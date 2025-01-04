@@ -23,7 +23,7 @@ const ScrollToTopButton = () => {
 
   // Phone call function (This will open the dialer with the phone number)
   const makePhoneCall = () => {
-    window.location.href = "tel:+1234567890"; // Replace with your phone number
+    window.location.href = "tel:+966533597085"; // Replace with your phone number
   };
 
   useEffect(() => {

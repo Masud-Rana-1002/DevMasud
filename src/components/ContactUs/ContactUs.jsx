@@ -45,7 +45,7 @@ const ContactUs = () => {
 
           // Show SweetAlert on successful form submission
           Swal.fire({
-            position: "top-end",
+            position: "center",
             icon: "success",
             title: "Message Sent Successfully",
             showConfirmButton: false,
@@ -56,7 +56,7 @@ const ContactUs = () => {
           console.log(error.text);
           // Optionally, show an error alert if needed
           Swal.fire({
-            position: "top-end",
+            position: "center",
             icon: "error",
             title: "Failed to send message",
             showConfirmButton: false,

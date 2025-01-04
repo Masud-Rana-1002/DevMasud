@@ -7,9 +7,9 @@ const MyProjects = () => {
       name: "Chill Gamer",
       description:
         "Game review platform allowing users to rate and discuss their favorite titles.",
-      link: "https://chill-gamer-d7e22.web.app/",
+      link: "#",
       gitLink: "https://github.com/Masud-Rana-1002", 
-      liveDemoLink: "#",
+      liveDemoLink: "https://chill-gamer-d7e22.web.app/",
       image: "https://i.ibb.co/MkMfP4v/Capfffture.png",
     },
     {
@@ -18,7 +18,7 @@ const MyProjects = () => {
         "Discount Pro: Optimized e-commerce platform for gadgets and tech products ",
       link: "#",
       gitLink: "https://github.com/username/gadgethaven", // GitHub repo link
-      liveDemoLink: "#", // Link to live demo
+      liveDemoLink: "https://discount-pro-eb0c0.web.app/", // Link to live demo
       image:
         "https://i.ibb.co/xJxvwJZ/discountpro.png", 
     },
@@ -46,7 +46,7 @@ const MyProjects = () => {
       description:  "An e-commerce platform for gadgets with advanced search and cart features.",
       link: "#",
       gitLink: "https://github.com/Masud-Rana-1002", // GitHub repo link
-      liveDemoLink: "https://helpup-54726.web.app/", // Link to live demo
+      liveDemoLink: "https://timely-mousse-c9385a.netlify.app/", // Link to live demo
       image: "https://i.ibb.co/TL93xYw/Capxxxture.png", // Image URL
     }
 

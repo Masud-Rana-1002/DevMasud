@@ -6,62 +6,65 @@ import { CiMenuFries } from "react-icons/ci";
 import { Link } from "react-scroll"; // Import Link from react-scroll
 import ShareCommentButton from "../ShareCommentButton/ShareCommentButton";
 import DownloadButton from "../DownloadButton/DownloadButton";
-
+import "./style.css"
 const Navbar = () => {
   const navMenu = (
     <>
-      {/* Replace NavLink with Link for smooth scrolling */}
       <li className="before:w-0 hover:before:w-full text-white before:bg-red-700 before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-red-700 transition-all duration-300 before:left-0 cursor-pointer capitalize">
-        <Link
-          to="homeSection"
-          smooth={true}
-          duration={500}
-          className="cursor-pointer"
-        >
-          Home
-        </Link>
-      </li>
-      <li className="before:w-0 hover:before:w-full text-white before:bg-red-700 before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-red-700 transition-all duration-300 before:left-0 cursor-pointer capitalize">
-        <Link
-          to="AboutMe"
-          smooth={true}
-          duration={500}
-          className="cursor-pointer"
-        >
-          About Me
-        </Link>
-      </li>
-      <li className="before:w-0 hover:before:w-full text-white before:bg-red-700 before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-red-700 transition-all duration-300 before:left-0 cursor-pointer capitalize">
-        <Link
-          to="MySkills"
-          smooth={true}
-          duration={500}
-          className="cursor-pointer"
-        >
-         My Skills
-        </Link>
-      </li>
-      <li className="before:w-0 hover:before:w-full text-white before:bg-red-700 before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-red-700 transition-all duration-300 before:left-0 cursor-pointer capitalize">
-        <Link
-          to="Projects"
-          smooth={true}
-          duration={500}
-          className="cursor-pointer"
-        >
-        Projects
-        </Link>
-      </li>
-      <li className="before:w-0 hover:before:w-full text-white before:bg-red-700 before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-red-700 transition-all duration-300 before:left-0 cursor-pointer capitalize">
-        <Link
-          to="ContactUs"
-          smooth={true}
-          duration={500}
-          className="cursor-pointer"
-        >
-     Contact Us
-        </Link>
-      </li>
-      {/* Add other navigation items similarly */}
+  <Link
+    to="homeSection"
+    smooth={true}
+    duration={500}
+    activeClass="active"
+    className="cursor-pointer"
+  >
+    Home
+  </Link>
+</li>
+<li className="before:w-0 hover:before:w-full text-white before:bg-red-700 before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-red-700 transition-all duration-300 before:left-0 cursor-pointer capitalize">
+  <Link
+    to="AboutMe"
+    smooth={true}
+    duration={500}
+    activeClass="active"
+    className="cursor-pointer"
+  >
+    About Me
+  </Link>
+</li>
+<li className="before:w-0 hover:before:w-full text-white before:bg-red-700 before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-red-700 transition-all duration-300 before:left-0 cursor-pointer capitalize">
+  <Link
+    to="MySkills"
+    smooth={true}
+    duration={500}
+    activeClass="active"
+    className="cursor-pointer"
+  >
+    My Skills
+  </Link>
+</li>
+<li className="before:w-0 hover:before:w-full text-white before:bg-red-700 before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-red-700 transition-all duration-300 before:left-0 cursor-pointer capitalize">
+  <Link
+    to="Projects"
+    smooth={true}
+    duration={500}
+    activeClass="active"
+    className="cursor-pointer"
+  >
+    Projects
+  </Link>
+</li>
+<li className="before:w-0 hover:before:w-full text-white before:bg-red-700 before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-red-700 transition-all duration-300 before:left-0 cursor-pointer capitalize">
+  <Link
+    to="ContactUs"
+    smooth={true}
+    duration={500}
+    activeClass="active"
+    className="cursor-pointer"
+  >
+    Contact Us
+  </Link>
+</li>
     </>
   );
 

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
+import Swal from "sweetalert2"; // Ensure you have SweetAlert2 installed
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -20,10 +22,48 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simulate form submission (for now)
-    setFormSubmitted(true);
-    // You can add actual form submission logic here (e.g., sending data to a server)
-    console.log(formData);
+
+    emailjs
+      .sendForm(
+        "service_livvrzt", // replace with your service ID from EmailJS
+        "template_bt29fva", // replace with your template ID from EmailJS
+        e.target,
+        "ELAnnJNt5Ls682KlA" // replace with your user ID from EmailJS
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setFormSubmitted(true);
+
+          // Reset the form state after successful submission
+          setFormData({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+          });
+
+          // Show SweetAlert on successful form submission
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Message Sent Successfully",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        },
+        (error) => {
+          console.log(error.text);
+          // Optionally, show an error alert if needed
+          Swal.fire({
+            position: "top-end",
+            icon: "error",
+            title: "Failed to send message",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
+      );
   };
 
   return (
@@ -31,12 +71,13 @@ const ContactUs = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Address Section */}
         <div className="flex flex-col justify-center bg-gray-800 p-8 rounded-lg shadow-xl">
-          <h3 className="text-2xl font-semibold mb-4">Our Address</h3>
-          <p className="text-gray-400">
-            1234 Street Name, City, Country
+          <h3 className="text-2xl font-semibold mb-4">My Address</h3>
+          <p className="text-gray-400">Chandpur, Bangladesh</p>
+          <p className="text-gray-400 mt-2">
+            Currently residing in Saudi Arabia
           </p>
-          <p className="text-gray-400 mt-2">Phone: +123-456-7890</p>
-          <p className="text-gray-400 mt-2">Email: contact@company.com</p>
+          <p className="text-gray-400 mt-2">Phone: +966-533597085</p>
+          <p className="text-gray-400 mt-2">Email: masudrana19981002@gmail.com</p>
         </div>
 
         {/* Contact Form Section */}
@@ -127,19 +168,12 @@ const ContactUs = () => {
             <div className="flex justify-center">
               <button
                 type="submit"
-                className="bg-blue-500 text-white py-2 px-6 rounded-md shadow-md hover:bg-blue-600 transition-all duration-300"
+                className="hover:bg-white text-[#1c1f23] bg-gray-300 hover:text-[#1c1f23] py-2 px-6 rounded-md shadow-md transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-white/50"
               >
                 Send Message
               </button>
             </div>
           </form>
-
-          {/* Success Message */}
-          {formSubmitted && (
-            <div className="mt-6 text-center text-green-500">
-              <p>Your message has been sent successfully!</p>
-            </div>
-          )}
         </div>
       </div>
     </section>

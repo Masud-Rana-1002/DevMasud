@@ -37,7 +37,7 @@ const Banner = () => {
   }
 
   return (
-    <div className="w-full h-full bg-[#1c1f23] p-8  rounded-md">
+    <div className="w-full h-full bg-[#1c1f23] p-8   rounded-md">
       {/* Main */}
       <header className="flex  flex-col-reverse lg:flex-row gap-[50px] lg:gap-0 items-center justify-between lg:mt-3 ">
         <div className="lg:w-[50%] w-full  text-center lg:text-left animate__animated animate__fadeInRight"> 

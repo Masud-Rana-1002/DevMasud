@@ -19,7 +19,7 @@ function App() {
   return (
     <>
       
-   <div className='space-y-4'>
+   <div className='space-y-4 container md:w-full mx-auto'>
    <Navbar />
         <Banner />
         <AboutMe/>

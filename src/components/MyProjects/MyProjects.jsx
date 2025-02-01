@@ -19,7 +19,8 @@ const MyProjects = () => {
       description:
         "Game review platform allowing users to rate and discuss their favorite titles.",
       link: "#",
-      gitLink: "https://github.com/Masud-Rana-1002",
+      gitClientLink: "https://github.com/Masud-Rana-1002/chill-Gamer",
+      gitServerLink: "https://github.com/Masud-Rana-1002/Chill-Gamer-chill-game-Server-Side",
       liveDemoLink: "https://chill-gamer-d7e22.web.app/",
       image: "https://i.ibb.co/MkMfP4v/Capfffture.png",
     },
@@ -28,7 +29,8 @@ const MyProjects = () => {
       description:
         "Discount Pro: Optimized e-commerce platform for gadgets and tech products ",
       link: "#",
-      gitLink: "https://github.com/username/gadgethaven", // GitHub repo link
+      gitClientLink: "https://github.com/Masud-Rana-1002/discount-pro",
+      gitServerLink: "https://github.com/Masud-Rana-1002/discount-pro",
       liveDemoLink: "https://discount-pro-eb0c0.web.app/", // Link to live demo
       image: "https://i.ibb.co/xJxvwJZ/discountpro.png",
     },
@@ -38,7 +40,8 @@ const MyProjects = () => {
       description:
         "Platform connecting volunteers with causes and organizations globally.",
       link: "#",
-      gitLink: "https://github.com/Masud-Rana-1002", // GitHub repo link
+      gitClientLink: "https://github.com/Masud-Rana-1002/help-Up-client-side",
+      gitServerLink: "https://github.com/Masud-Rana-1002/help-Up-server-side",
       liveDemoLink: "https://helpup-54726.web.app/", // Link to live demo
       image: "https://i.ibb.co/yBSDZ2g/helpup.png", // Image URL
     },
@@ -47,7 +50,8 @@ const MyProjects = () => {
       description:
         "A modern fitness website designed to inspire and guide users on their health journey. ",
       link: "#",
-      gitLink: "https://github.com/Masud-Rana-1002", // GitHub repo link
+      gitClientLink: "https://github.com/Masud-Rana-1002/fitness",
+      gitServerLink: "https://github.com/Masud-Rana-1002/fitness",
       liveDemoLink: "https://masud-rana-1002.github.io/fitness/", // Link to live demo
       image: "https://i.ibb.co/883CfDK/Fitness.png", // Image URL
     },
@@ -56,7 +60,8 @@ const MyProjects = () => {
       description:
         "An e-commerce platform for gadgets with advanced search and cart features.",
       link: "#",
-      gitLink: "https://github.com/Masud-Rana-1002", // GitHub repo link
+      gitClientLink: "https://github.com/Masud-Rana-1002/Learn_Together_Client",
+      gitServerLink: "https://github.com/Masud-Rana-1002/Learn_Together_Server",
       liveDemoLink: "https://timely-mousse-c9385a.netlify.app/", // Link to live demo
       image: "https://i.ibb.co/TL93xYw/Capxxxture.png", // Image URL
     },

@@ -23,7 +23,7 @@ const AboutMe = () => {
           solutions. Whether it's front-end design or back-end logic, I love
           bringing ideas to life through code.
         </p>
-        <ShareCommentButton btnText="View My Work"></ShareCommentButton>
+      
       </div>
     </section>
   );

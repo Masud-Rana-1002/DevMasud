@@ -43,9 +43,9 @@ const Banner = () => {
         <div className="lg:w-[50%] w-full  text-center lg:text-left animate__animated animate__fadeInRight"> 
           <p className="">Welcome to my world</p>
 
-          <h1 className="text-[30px] lg:text-[30px] h-24 mb-3 leading-[35px] lg:leading-[35px] lg:text-start text-center">
+          <h1 className="text-[30px] lg:text-[30px] md:h-24 mb-3 leading-[35px] lg:leading-[35px] lg:text-start text-center">
             Hi, I’m <span className="text-red-700 ">Masud Rana</span>{" "}
-            <span style={{ color: "white", fontWeight: "bold" }}>
+            <span className="hidden md:block" style={{ color: "white", fontWeight: "bold" }}>
               <h1 >
                 <Typewriter speed={400} text={words} loop={true} />
               </h1>

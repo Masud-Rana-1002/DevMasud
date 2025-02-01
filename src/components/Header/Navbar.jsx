@@ -85,7 +85,7 @@ const Navbar = () => {
         <DownloadButton/>
         </div>
         <CiMenuFries
-          className="text-[1.8rem] mr-1 text-[#424242] cursor-pointer lg:hidden flex"
+          className="text-[1.8rem] mr-1  cursor-pointer lg:hidden flex"
           onClick={() => setMobileSidebarOpen(!mobileSidebarOpen)}
         />
       </div>

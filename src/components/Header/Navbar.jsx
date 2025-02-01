@@ -72,9 +72,9 @@ const Navbar = () => {
 
   return (
     <nav className="sticky z-50 px-8 py-2 top-0 flex mx-auto items-center justify-between container md:w-full backdrop-blur-md bg-black/30 border-b border-white/10 rounded-full shadow-lg transition-all duration-300">
-      <div className="flex items-center gap-2">
+    <Link to='/'>  <div className="flex items-center gap-2">
         <img className="w-8" src={logo} alt="logo" /> <p>DevMasud</p>
-      </div>
+      </div></Link>
 
       <ul className="items-center gap-[20px] text-[1rem] text-[#424242] lg:flex hidden">
         {navMenu}

@@ -6,65 +6,62 @@ import { CiMenuFries } from "react-icons/ci";
 import { Link } from "react-scroll"; // Import Link from react-scroll
 import ShareCommentButton from "../ShareCommentButton/ShareCommentButton";
 import DownloadButton from "../DownloadButton/DownloadButton";
-import "./style.css"
+import "./style.css";
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const navMenu = (
     <>
       <li className="before:w-0 hover:before:w-full text-white before:bg-red-700 before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-red-700 transition-all duration-300 before:left-0 cursor-pointer capitalize">
-  <Link
-    to="homeSection"
-    smooth={true}
-    duration={500}
-    activeClass="active"
-    className="cursor-pointer"
-  >
-    Home
-  </Link>
-</li>
-<li className="before:w-0 hover:before:w-full text-white before:bg-red-700 before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-red-700 transition-all duration-300 before:left-0 cursor-pointer capitalize">
-  <Link
-    to="AboutMe"
-    smooth={true}
-    duration={500}
-    activeClass="active"
-    className="cursor-pointer"
-  >
-    About Me
-  </Link>
-</li>
-<li className="before:w-0 hover:before:w-full text-white before:bg-red-700 before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-red-700 transition-all duration-300 before:left-0 cursor-pointer capitalize">
-  <Link
-    to="MySkills"
-    smooth={true}
-    duration={500}
-    activeClass="active"
-    className="cursor-pointer"
-  >
-    My Skills
-  </Link>
-</li>
-<li className="before:w-0 hover:before:w-full text-white before:bg-red-700 before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-red-700 transition-all duration-300 before:left-0 cursor-pointer capitalize">
-  <Link
-    to="Projects"
-    smooth={true}
-    duration={500}
-    activeClass="active"
-    className="cursor-pointer"
-  >
-    Projects
-  </Link>
-</li>
-<li className="before:w-0 hover:before:w-full text-white before:bg-red-700 before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-red-700 transition-all duration-300 before:left-0 cursor-pointer capitalize">
-  <Link
-    to="ContactUs"
-    smooth={true}
-    duration={500}
-    activeClass="active"
-    className="cursor-pointer"
-  >
-    Contact Us
-  </Link>
-</li>
+        <NavLink to="/">Home</NavLink>
+      </li>
+
+      <li className="before:w-0 hover:before:w-full text-white before:bg-red-700 before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-red-700 transition-all duration-300 before:left-0 cursor-pointer capitalize">
+        <Link
+          to="AboutMe"
+          smooth={true}
+          duration={500}
+          activeClass="active"
+          className="cursor-pointer"
+        >
+          About Me
+        </Link>
+      </li>
+      <li className="before:w-0 hover:before:w-full text-white before:bg-red-700 before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-red-700 transition-all duration-300 before:left-0 cursor-pointer capitalize">
+        <Link
+          to="MySkills"
+          smooth={true}
+          duration={500}
+          activeClass="active"
+          className="cursor-pointer"
+        >
+          My Skills
+        </Link>
+      </li>
+      <li className="before:w-0 hover:before:w-full text-white before:bg-red-700 before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-red-700 transition-all duration-300 before:left-0 cursor-pointer capitalize">
+        <Link
+          to="Projects"
+          smooth={true}
+          duration={500}
+          activeClass="active"
+          className="cursor-pointer"
+        >
+          Projects
+        </Link>
+      </li>
+      <li className="before:w-0 hover:before:w-full text-white before:bg-red-700 before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-red-700 transition-all duration-300 before:left-0 cursor-pointer capitalize">
+        <Link
+          to="ContactUs"
+          smooth={true}
+          duration={500}
+          activeClass="active"
+          className="cursor-pointer"
+        >
+          Contact Us
+        </Link>
+      </li>
+      <li className="before:w-0 hover:before:w-full text-white before:bg-red-700 before:h-[2px] before:transition-all before:duration-300 before:absolute relative before:rounded-full before:bottom-[-2px] hover:text-red-700 transition-all duration-300 before:left-0 cursor-pointer capitalize">
+        <NavLink to="/courses">My Courses</NavLink>
+      </li>
     </>
   );
 
@@ -72,9 +69,12 @@ const Navbar = () => {
 
   return (
     <nav className="sticky z-50 px-8 py-2 top-0 flex mx-auto items-center justify-between container md:w-full backdrop-blur-md bg-black/30 border-b border-white/10 rounded-full shadow-lg transition-all duration-300">
-    <Link to='/'>  <div className="flex items-center gap-2">
-        <img className="w-8" src={logo} alt="logo" /> <p>DivMasud</p>
-      </div></Link>
+      <Link to="/">
+        {" "}
+        <div className="flex items-center gap-2">
+          <img className="w-8" src={logo} alt="logo" /> <p>DivMasud</p>
+        </div>
+      </Link>
 
       <ul className="items-center gap-[20px] text-[1rem] text-[#424242] lg:flex hidden">
         {navMenu}
@@ -82,7 +82,7 @@ const Navbar = () => {
 
       <div className="items-center gap-[10px] flex">
         <div className="hidden lg:flex">
-        <DownloadButton/>
+          <DownloadButton />
         </div>
         <CiMenuFries
           className="text-[1.8rem] mr-1  cursor-pointer lg:hidden flex"
@@ -99,7 +99,7 @@ const Navbar = () => {
       >
         <ul className="items-center gap-[20px] text-[1rem] text-gray-600 flex flex-col">
           {navMenu}
-          <DownloadButton/>
+          <DownloadButton />
         </ul>
       </aside>
     </nav>

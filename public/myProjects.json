@@ -1,0 +1,156 @@
+[
+  {
+    "id": "1",
+    "name": "Learn Together",
+    "description": "Collaborative study platform enabling users to share knowledge, engage in discussions, and enhance learning together.",
+    "link": "#",
+    "gitClientLink": "https://github.com/Masud-Rana-1002/Learn_Together_Client",
+    "gitServerLink": "https://github.com/Masud-Rana-1002/Learn_Together_Server",
+    "liveDemoLink": "https://learn-together-795ee.web.app/",
+    "image": "https://i.ibb.co/xKwnGyRj/Capdddture.png",
+    "moreImage": [
+      "https://i.ibb.co/xKwnGyRj/Capdddture.png",
+      "https://i.ibb.co/Lhg6YGJ9/image.png",
+      "https://i.ibb.co/N2p87jgg/image.png"
+    ],
+    "technologyStack": "React.js, Tailwind CSS, React Router, Node.js, Express.js, MongoDB,",
+    "challenges": [
+      "Implement tanstack query in all the data fetching functionality (For GET method only)",
+      "Implement JWT on login (Email/Password and social) and store the token. Make sure to store the token in local storage. Don’t use cookies",
+      "Implement pagination (at least on 2 different pages)",
+      "Admin Dashboard: If the admin rejects a study session, a modal popup will appear. This popup will contain these input fields: Rejection reason, Feedback",
+      "Tutor Dashboard: The tutor views the rejection reason and feedback"
+    ],
+    "improvements": "Change the UI design and add more sections."
+  },
+  {
+    "id": "4",
+    "name": "HelpUp",
+    "description": "Platform connecting volunteers with causes and organizations globally.",
+    "link": "#",
+    "gitClientLink": "https://github.com/Masud-Rana-1002/help-Up-client-side",
+    "gitServerLink": "https://github.com/Masud-Rana-1002/help-Up-server-side",
+    "liveDemoLink": "https://helpup-54726.web.app/",
+    "image": "https://i.ibb.co/8DDCrXXd/image.png",
+    "moreImage": [
+      "https://i.ibb.co/8DDCrXXd/image.png",
+      "https://i.ibb.co/1t80z5s0/image.png",
+      "https://i.ibb.co/nNL1vVbL/image.png",
+      "https://i.ibb.co/84sDmLz1/image.png"
+    ],
+    "technologyStack": "React, Firebase, Node.js",
+    "challenges": [
+      "On the Need Volunteer Page, if the number of volunteers needed is 0, then it will show a message, and the user cannot add it through 'Be a Volunteer'.",
+      "Implement a dark/light theme toggling in the Navbar for the whole web application.",
+      "Upon login, create a JWT token and store it on the client side. Send the token with the call and verify the user. Implementing 401 and 403 is optional.",
+      "Ensure the JWT token is implemented on private routes for both email/password authentication and social login.",
+      "In the Need Volunteer Page, initially, there will be a three-column layout. On clicking the change layout button, the layout will change to a table form layout."
+    ],
+    "improvements": "Improve mobile responsiveness and add more categories for volunteer opportunities."
+  }
+  ,
+  {
+    "id": "2",
+    "name": "Chill Gamer",
+    "description": "Game review platform allowing users to rate and discuss their favorite titles.",
+    "link": "#",
+    "gitClientLink": "https://github.com/Masud-Rana-1002/chill-Gamer",
+    "gitServerLink": "https://github.com/Masud-Rana-1002/Chill-Gamer-chill-game-Server-Side",
+    "liveDemoLink": "https://chill-gamer-d7e22.web.app/",
+    "image": "https://i.ibb.co/MkMfP4v/Capfffture.png",
+    "moreImage": [
+      "https://i.ibb.co/MkMfP4v/Capfffture.png",
+      "https://i.ibb.co/Ppj6v5X/image.png",
+      "https://i.ibb.co/chJ7DGbx/image.png"
+    ],
+    "technologyStack": "React, Node.js, MongoDB, Express",
+    "challenges": [
+  "Handling user authentication and implementing a scalable database structure.",
+  "Implementing a dark/light theme toggle in the Navbar for the whole web application.",
+  "Using Lottie React, React Simple Typewriter, React Awesome Reveal, and React Tooltip for dynamic and interactive UI components.",
+  "Adding sorting functionality on the 'All Reviews' page based on rating and year, with ascending and descending options.",
+  "Adding a filter functionality on the 'All Reviews' page to filter reviews based on the Genres field of the game.",
+  "Implementing a dark/light theme toggle for the home page.",
+  "Exploring and implementing at least 2 of the following packages: Lottie React, React Simple Typewriter, React Awesome Reveal, React Tooltip.",
+  "At the top of the 'All Reviews' page, adding a dropdown button for sorting reviews by 'Rating' and 'Year'.",
+  "At the top of the 'All Reviews' page, adding a dropdown menu for filtering reviews based on the Genres field of the game."
+],
+    "improvements": "Add game recommendation  and improve the UI/UX design."
+  },
+  {
+    "id": "3",
+    "name": "Discount Pro",
+    "description": "Optimized e-commerce platform for gadgets and tech products.",
+    "link": "#",
+    "gitClientLink": "https://github.com/Masud-Rana-1002/discount-pro",
+    "gitServerLink": "https://github.com/Masud-Rana-1002/discount-pro",
+    "liveDemoLink": "https://discount-pro-eb0c0.web.app/",
+    "image": "https://i.ibb.co/Wpd6JBDx/image.png",
+    "moreImage": [
+      "https://i.ibb.co/Wpd6JBDx/image.png",
+      "https://i.ibb.co/mCgfzT09/image.png",
+      "https://i.ibb.co/DH5CKYvs/image.png",
+      "https://i.ibb.co/bcfQwkD/image.png"
+    ],
+    "technologyStack": "React, Firebase, Stripe, Tailwind CSS",
+    "challenges": [
+  "Handling user authentication and implementing a scalable database structure.",
+  "Implementing a dark/light theme toggle in the Navbar for the whole web application.",
+  "Using Lottie React, React Simple Typewriter, React Awesome Reveal, and React Tooltip for dynamic and interactive UI components.",
+  "Adding sorting functionality on the 'All Reviews' page based on rating and year, with ascending and descending options.",
+  "Adding a filter functionality on the 'All Reviews' page to filter reviews based on the Genres field of the game.",
+  "Implementing a dark/light theme toggle for the home page.",
+  "Exploring and implementing at least 2 of the following packages: Lottie React, React Simple Typewriter, React Awesome Reveal, React Tooltip.",
+  "At the top of the 'All Reviews' page, adding a dropdown button for sorting reviews by 'Rating' and 'Year'.",
+  "At the top of the 'All Reviews' page, adding a dropdown menu for filtering reviews based on the Genres field of the game.",
+  "Implementing the forgot password feature with a functional form to reset the password via email and redirect the user to Gmail to log out.",
+  "Adding an update information feature in the 'my-profile' route with a form to update the user's photo URL and name.",
+  "Implementing a special animation using an NPM package (AOS, Animate.css, or similar) on the homepage.",
+  "Implementing password toggling on the registration page, allowing users to show or hide the password using an 'Eye' icon."
+],
+    "improvements": "Add implement dynamic product recommendations."
+  },
+
+  {
+    "id": "5",
+    "name": "Fitness",
+    "description": "A modern fitness website designed to inspire and guide users on their health journey.",
+    "link": "#",
+    "gitClientLink": "https://github.com/Masud-Rana-1002/fitness",
+    "gitServerLink": "https://github.com/Masud-Rana-1002/fitness",
+    "liveDemoLink": "https://masud-rana-1002.github.io/fitness/",
+    "image": "https://i.ibb.co/sv97GkGs/image.png",
+    "moreImage": [
+      "https://i.ibb.co/sv97GkGs/image.png",
+      "https://i.ibb.co/nNRtkyWp/image.png",
+      "https://i.ibb.co/W4R9g1GD/image.png",
+      "https://i.ibb.co/W4R9g1GD/image.png"
+    ],
+    "technologyStack": "HTML, CSS, JavaScript",
+    "challenges": ["Designing a visually appealing and easy-to-use interface."],
+    "improvements": "Integrate user profile management and progress tracking."
+  },
+  {
+    "id": "6",
+    "name": "GadgetHaven",
+    "description": "An e-commerce platform for gadgets with advanced search and cart features.",
+    "link": "#",
+    "gitClientLink": "https://github.com/Masud-Rana-1002/Learn_Together_Client",
+    "gitServerLink": "https://github.com/Masud-Rana-1002/Learn_Together_Server",
+    "liveDemoLink": "https://timely-mousse-c9385a.netlify.app/",
+    "image": "https://i.ibb.co/n8Q14n7S/image.png",
+    "moreImage": [
+      "https://i.ibb.co/n8Q14n7S/image.png",
+      "https://i.ibb.co/nsJyQYf8/image.png",
+      "https://i.ibb.co/vxkczwXk/image.png"
+    ],
+    "technologyStack": "React, Firebase, Tailwind CSS, Redux",
+   "challenges": [
+  "Ensuring product names and prices are displayed on product cards when added.",
+  "Displaying the total number of items added to the cart.",
+  "Displaying the total price of items in the cart (wishlist).",
+  "Resetting the cart to 0 after a successful payment."
+],
+    "improvements": "Add multi-vendor support and improve product recommendation engine."
+  }
+]

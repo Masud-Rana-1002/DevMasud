@@ -1,82 +1,89 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ShareCommentButton from "../ShareCommentButton/ShareCommentButton";
 import { FaGithub } from "react-icons/fa";
+import axios from "axios";
+import { Link } from "react-router-dom";
+
 
 const MyProjects = () => {
-  const projects = [
-    {
-      name: "Learn Together",
-      description:
-        "Collaborative study platform enabling users to share knowledge, engage in discussions, and enhance learning together.",
-      link: "#",
-      gitClientLink: "https://github.com/Masud-Rana-1002/Learn_Together_Client",
-      gitServerLink: "https://github.com/Masud-Rana-1002/Learn_Together_Server",
-      liveDemoLink: "https://learn-together-795ee.web.app/",
-      image: "https://i.ibb.co/xKwnGyRj/Capdddture.png",
-    },
-    {
-      name: "Chill Gamer",
-      description:
-        "Game review platform allowing users to rate and discuss their favorite titles.",
-      link: "#",
-      gitClientLink: "https://github.com/Masud-Rana-1002/chill-Gamer",
-      gitServerLink: "https://github.com/Masud-Rana-1002/Chill-Gamer-chill-game-Server-Side",
-      liveDemoLink: "https://chill-gamer-d7e22.web.app/",
-      image: "https://i.ibb.co/MkMfP4v/Capfffture.png",
-    },
-    {
-      name: "Discount Pro",
-      description:
-        "Discount Pro: Optimized e-commerce platform for gadgets and tech products ",
-      link: "#",
-      gitClientLink: "https://github.com/Masud-Rana-1002/discount-pro",
-      gitServerLink: "https://github.com/Masud-Rana-1002/discount-pro",
-      liveDemoLink: "https://discount-pro-eb0c0.web.app/", // Link to live demo
-      image: "https://i.ibb.co/xJxvwJZ/discountpro.png",
-    },
+  const [projectsData, setProjectsData] = useState([]);
+  // const projects = [
+  //   {
+  //     name: "Learn Together",
+  //     description:
+  //       "Collaborative study platform enabling users to share knowledge, engage in discussions, and enhance learning together.",
+  //     link: "#",
+  //     gitClientLink: "https://github.com/Masud-Rana-1002/Learn_Together_Client",
+  //     gitServerLink: "https://github.com/Masud-Rana-1002/Learn_Together_Server",
+  //     liveDemoLink: "https://learn-together-795ee.web.app/",
+  //     image: "https://i.ibb.co/xKwnGyRj/Capdddture.png",
+  //   },
+  //   {
+  //     name: "Chill Gamer",
+  //     description:
+  //       "Game review platform allowing users to rate and discuss their favorite titles.",
+  //     link: "#",
+  //     gitClientLink: "https://github.com/Masud-Rana-1002/chill-Gamer",
+  //     gitServerLink:
+  //       "https://github.com/Masud-Rana-1002/Chill-Gamer-chill-game-Server-Side",
+  //     liveDemoLink: "https://chill-gamer-d7e22.web.app/",
+  //     image: "https://i.ibb.co/MkMfP4v/Capfffture.png",
+  //   },
+  //   {
+  //     name: "Discount Pro",
+  //     description:
+  //       "Discount Pro: Optimized e-commerce platform for gadgets and tech products ",
+  //     link: "#",
+  //     gitClientLink: "https://github.com/Masud-Rana-1002/discount-pro",
+  //     gitServerLink: "https://github.com/Masud-Rana-1002/discount-pro",
+  //     liveDemoLink: "https://discount-pro-eb0c0.web.app/", // Link to live demo
+  //     image: "https://i.ibb.co/xJxvwJZ/discountpro.png",
+  //   },
 
-    {
-      name: "HelpUp",
-      description:
-        "Platform connecting volunteers with causes and organizations globally.",
-      link: "#",
-      gitClientLink: "https://github.com/Masud-Rana-1002/help-Up-client-side",
-      gitServerLink: "https://github.com/Masud-Rana-1002/help-Up-server-side",
-      liveDemoLink: "https://helpup-54726.web.app/", // Link to live demo
-      image: "https://i.ibb.co/yBSDZ2g/helpup.png", // Image URL
-    },
-    {
-      name: "Fitness",
-      description:
-        "A modern fitness website designed to inspire and guide users on their health journey. ",
-      link: "#",
-      gitClientLink: "https://github.com/Masud-Rana-1002/fitness",
-      gitServerLink: "https://github.com/Masud-Rana-1002/fitness",
-      liveDemoLink: "https://masud-rana-1002.github.io/fitness/", // Link to live demo
-      image: "https://i.ibb.co/883CfDK/Fitness.png", // Image URL
-    },
-    {
-      name: "GadgetHaven",
-      description:
-        "An e-commerce platform for gadgets with advanced search and cart features.",
-      link: "#",
-      gitClientLink: "https://github.com/Masud-Rana-1002/Learn_Together_Client",
-      gitServerLink: "https://github.com/Masud-Rana-1002/Learn_Together_Server",
-      liveDemoLink: "https://timely-mousse-c9385a.netlify.app/", // Link to live demo
-      image: "https://i.ibb.co/TL93xYw/Capxxxture.png", // Image URL
-    },
-  ];
-
+  //   {
+  //     name: "HelpUp",
+  //     description:
+  //       "Platform connecting volunteers with causes and organizations globally.",
+  //     link: "#",
+  //     gitClientLink: "https://github.com/Masud-Rana-1002/help-Up-client-side",
+  //     gitServerLink: "https://github.com/Masud-Rana-1002/help-Up-server-side",
+  //     liveDemoLink: "https://helpup-54726.web.app/", 
+  //     image: "https://i.ibb.co/yBSDZ2g/helpup.png",
+  //   },
+  //   {
+  //     name: "Fitness",
+  //     description:
+  //       "A modern fitness website designed to inspire and guide users on their health journey. ",
+  //     link: "#",
+  //     gitClientLink: "https://github.com/Masud-Rana-1002/fitness",
+  //     gitServerLink: "https://github.com/Masud-Rana-1002/fitness",
+  //     liveDemoLink: "https://masud-rana-1002.github.io/fitness/", 
+  //     image: "https://i.ibb.co/883CfDK/Fitness.png",
+  //   },
+  //   {
+  //     name: "GadgetHaven",
+  //     description:
+  //       "An e-commerce platform for gadgets with advanced search and cart features.",
+  //     link: "#",
+  //     gitClientLink: "https://github.com/Masud-Rana-1002/Learn_Together_Client",
+  //     gitServerLink: "https://github.com/Masud-Rana-1002/Learn_Together_Server",
+  //     liveDemoLink: "https://timely-mousse-c9385a.netlify.app/",
+  //     image: "https://i.ibb.co/TL93xYw/Capxxxture.png", 
+  //   },
+  // ];
+useEffect(() => {
+  axios.get('/myProjects.json')
+  .then(response => {
+    setProjectsData(response.data);
+  })
+},[])
   const [showAll, setShowAll] = useState(false); // State to control visibility
 
   // Show only the first 3 projects initially, or all if showAll is true
-  const displayedProjects = showAll ? projects : projects.slice(0, 3);
+  const displayedProjects = showAll ? projectsData : projectsData.slice(0, 3);
 
   return (
-    <section
-      id="Projects"
-      className=" text-white py-10 px-5 bg-[#1c1f23]"
-    >
+    <section id="Projects" className=" text-white py-10 px-5 bg-[#1c1f23]">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-8">My Projects</h2>
 
@@ -94,14 +101,6 @@ const MyProjects = () => {
                     />
 
                     {/* Live Demo Button appears only on hover */}
-                    <a
-                      href={project.liveDemoLink}
-                      className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white py-2 px-4 rounded-md shadow-md hover:bg-blue-600 transition-all duration-300 opacity-0 group-hover:opacity-100"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Live Demo
-                    </a>
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold">{project.name}</h3>
@@ -112,35 +111,12 @@ const MyProjects = () => {
                 </div>
 
                 <div className="flex gap-1 justify-center items-center">
-                  {/* GitHub Button */}
-                  <a
-                    href={project.gitClientLink}
-                    className="p-1 flex items-center justify-center bg-[#FFFFFF] text-black rounded-md shadow-md  transition-all duration-300"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <p className="text-2xl ">
-                      {" "}
-                      <FaGithub />
-                    </p>{" "}
-                    Client Side
-                  </a>
-
-                  {/* View Details Button */}
-
-                  <a
-                    href={project.gitServerLink}
-                    className="p-1 flex items-center justify-center  bg-[#FFFFFF] text-black  rounded-md shadow-md  transition-all duration-300"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <p className="text-2xl ">
-                      {" "}
-                      <FaGithub />
-                    </p>{" "}
-                    Server Side
-                  </a>
+                
+                 
                 </div>
+                <button   >
+                  <Link className="p-1 flex items-center justify-center  bg-[#FFFFFF] text-black  rounded-md shadow-md  transition-all duration-300" to={`/Details/${project.id}`} smooth={true} duration={500}>Details</Link>
+                  </button>
               </div>
             </div>
           ))}
